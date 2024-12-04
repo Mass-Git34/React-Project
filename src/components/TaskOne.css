@@ -1,0 +1,30 @@
+.container {
+    display: flex;
+    /* Use flexbox */
+    flex-wrap: wrap;
+    /* Allow wrapping to the next row */
+    gap: 20px;
+    /* Add spacing between items */
+    justify-content: center;
+    /* Center items horizontally */
+    max-width: 800px;
+    /* Limit the container width */
+    margin: 0 auto;
+    /* Center the container on the page */
+}
+
+.box {
+    width: 150px;
+    height: 150px;
+    background-color: #4caf50;
+    /* Green background */
+    color: white;
+    display: flex;
+    /* Center content inside */
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    /* Rounded corners */
+    font-size: 18px;
+    font-weight: bold;
+}

@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import TaskOne from './components/TaskOne';
+import TaskTwo from './components/TaskTwo';
 
 function App() {
+  const [showTask, setShowTask] = useState(1); // State to toggle between TaskOne and TaskTwo
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>React Tasks</h1>
+      <div style={{ marginBottom: '20px' }}>
+        <button onClick={() => setShowTask(1)}>Show Task 1</button>
+        <button onClick={() => setShowTask(2)}>Show Task 2</button>
+      </div>
+      {showTask === 1 && <TaskOne />}
+      {showTask === 2 && <TaskTwo />}
     </div>
   );
 }
